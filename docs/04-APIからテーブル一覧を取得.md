@@ -1,84 +1,77 @@
-# API からテーブル一覧を取得
+# Get data with HttpClient
 
-ここでは、HttpClientModuleを利用して API からデータを取得し返却する関数を作成します。また、取得したテーブル一覧をコンポーネント側で表示します。
+In this section, you get customers records from Northwind Web Service by using Angular HttpClient and then display them in the customers component.
+
+Customers records:
+[http://northwind.servicestack.net/customers](http://northwind.servicestack.net/customers)
+
+customers.json:
+[http://northwind.servicestack.net/customers.json](http://northwind.servicestack.net/customers.json)
 
 ## 目的
 - Angular の関連モジュールを利用する方法を学習する。
 - Angular の HttpClient を利用して APIからデータを取得する方法を学習します。
 - View における Data Binding 及び、ngFor 等の Directive の利用方法を学習する。
 
-## 手順
+## Steps
 1. HttpClientModule のインポート
 2. HttpClientModule を利用してテーブル一覧を取得
 3. テーブル一覧の表示
 4. 実行結果の確認
 
 
-## HttpClientModule のインポート
+## Import HttpClientModule
 
-まず、APIよりデータを取得するために利用したい HttpClientModule を AppModule で Import して利用出来る状態とします。
-
-以下のように、HttpClientModuleを@NgModuleデコレータ内の imports に追加します。
+Import HttpClientModule in the app.module.ts so that you can use HttpClient in your Components.
 
 app\app.module.ts
 
 ```ts
 ・・・
-//追加
+//Add
 import { HttpClientModule } from '@angular/common/http';
 ・・・
 
 ・・・
   imports: [
-    HttpClientModule,  //追加
+    HttpClientModule,  //Add
     FormsModule,
 ・・・
 ```
 
-## HttpClientModule を利用してテーブル一覧を取得
+## Get customers through HttpClient
 
-続いて、サービス側で HttpClientModule を利用するために、 HttpClient, HttpHeaders をインポートし、DI により HttpClient のインスタンスを受け取ります。更に HttpClient を利用して getTables() 関数の中でAPIのエンドポイントへアクセスし、テーブル一覧(メタデータの一覧)を取得します。
+Let's get customers records as json data from Northwind Web Service through HttpClient.
 
-以下のように編集して下さい。
+Open northwind-service.ts and do
+ - import HttpClient and Observable
+ - DI of HttpClient
+ - use get() method to get data from the baseUrl
 
-app/api-server-service.ts
+app/northwind-service.ts
 
 ```ts
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
-
-//API Server のテーブル情報(MetaData)のスキーマ定義
-export class APITable {
-  name: string;
-  kind: string;
-  url: string;
-}
+import { HttpClient } from '@angular/common/http'; //Add
+import { Observable } from 'rxjs/Observable'; //Add
 
 @Injectable()
-export class ApiServerService {
+export class NorthwindService {
+  private baseUrl = 'http://northwind.servicestack.net/customers.json'; // API End Point
 
-  //APIのエンドポイントと認証情報
-  //（各自のエンドポイントや認証情報を設定して下さい。）
-  private baseUrl = 'https://?????/api.rsc'; //APIエンドポイント
-  private userName = 'user-name'; //ID
-  private authToken = 'auth-taken'; //token
-  private headers = new HttpHeaders(
-    {
-      'Authorization': 'Basic ' + btoa(this.userName + ':' + this.authToken)
-    }
-  );
+  constructor(private http: HttpClient) {
+   }
 
-  constructor(private http: HttpClient) { }
-
-  //テーブル一覧を取得
-  getTables(): Observable<APITable[]> {
-    return this.http.get<any>(this.baseUrl, {headers: this.headers})
-    .map(res => res.value as APITable[]);
-  }
+   getCustomers(): Observable<any> {
+    return this.http.get<any>(this.baseUrl)
+    .map(res => {
+      return res.Customers as any;
+    });
+     
+   }
 }
 ```
-HttpClient の get() メソッドは Observable 型を返すので、事前に定義しておいたテーブルのメタデータのスキーマ APITable の配列型を指定して、getTables() メソッドの返却値としています。また、.map()　の中でAPIの戻り値の value を返却するようにしていますが、これは OData が value の中に結果セットを入れているためにマッピングしているものです。
+HttpClient.get() method returns Observable<T>. In the real world app it should be better 
 
 ## テーブル一覧の表示
 

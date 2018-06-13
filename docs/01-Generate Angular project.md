@@ -23,11 +23,45 @@ $ ig
 
 The cli would ask you about the application name, please enter the name you like and hit the enter key
 
-<img src="01-01.png" width="80%"/>
-<img src="01-02.png" width="40%"/>
+![](assets/01-01.png)
 
+Select Angular and hit the enter key.
 
 ![](assets/01-02.png)
+
+Select "Ignite UI for Angular" and hit the enter key.
+
+![](assets/01-03.png)
+
+Select "Add view" and hit the enter key.
+
+![](assets/01-04.png)
+
+Select "Monster Grid" and hit the enter key.
+
+![](assets/01-05.png)
+
+Type the view name you like and hit the enter key.
+
+![](assets/01-06.png)
+
+Select "Complete & Run" and hit the enter key.
+
+![](assets/01-07.png)
+
+Then igniteui-cli start generating new Angular project and installing all dependencies to the project. This may take long because dependencies
+
+![](assets/01-08.png)
+
+Once npm got all dependencies, the cli will build the application, launch it on the web server and then the web browser will automatically open to show the angular app you just created.
+
+![](assets/01-09.png)
+
+You would see the application like images below on your default browser.
+
+![](assets/01-10.png)
+
+![](assets/01-11.png)
 
 [Ignite UI for Angular を開始 (Ignite UI CLI利用)](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#tab-ignite-ui-cli)
 
@@ -39,11 +73,11 @@ The cli would ask you about the application name, please enter the name you like
 
 MonsterGridを選択して、どんな事ができるのか UI を触ってみましょう。
 
-## 補足
+## Note: Going with Angular CLI ? 
 
-Ignite UI CLI を利用せずに Angular CLI を利用して一からAngularプロジェクトの作成 ～ Ignite UI for Angular のインストールまで行う場合は、以下のWebページをご参考にして下さい。
+If you want to go with Angular CLI instead of Ignite UI CLI then check the following page and scroll down to the middle of the page. 
 
-[Ignite UI for Angular を開始 (npm利用)](https://jp.infragistics.com/products/ignite-ui-angular/getting-started#tab-npm)
+[Getting started with Ignite UI for Angular](https://www.infragistics.com/products/ignite-ui-angular/getting-started)
 
 ## Next
 

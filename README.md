@@ -1,10 +1,11 @@
-# Angular hands-on with Ignite UI
+# Ignite UI for Angular hands-on workshop
 
-## 本ハンズオンについて
+## About this workshop
 
-本ハンズオンでは、Angular アプリケーションにおけるAPIからデータの取得して表示するまでの基本的な流れを学習します。以下の内容を簡単なハンズオンを通じて体験することが出来ます。
+This workshop is for those who want to try IgniteUI for Angular or who are looking for rich and fast UI components, e.g. grid and chart, which can be used in Angular app. You can experience how to build Angular app with Ignite UI for Angular and its productivity through this workshop.
 
-1. Angular について
+1. Generate Angular app with IgniteUI for Angular by using igniteui-cli
+2. Display Customers table got from Northwind Web Service on a grid 
     1. Component
     2. Service
     3. Dipendency Injection
@@ -16,9 +17,9 @@
         1. igx-grid
         2. igx-navbar
 
-## 環境について
+## Build/Check Environment
 
-[動作確認環境について](docs/00-環境構築.md)
+[Environment - getting started with igniteui-cli](docs/00-環境構築.md)
 
 ## 目次
 0. [環境構築](docs/00-環境構築.md)

@@ -42,10 +42,10 @@ export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { text: 'Home' } },
   { path: 'monstergrid', component: MonsterGridComponent, data: { text: 'MonsterGrid' } },
-  { path: 'customers', component: CustomersComponent, data: { text: 'CustomersComponent' } }
+  { path: 'customers', component: CustomersComponent, data: { text: 'Customers' } }
 ];
 
-・・・
+...
 ```
 ## Check the result
 
@@ -63,7 +63,7 @@ $ ng  serve
 Now you have a component to display customers data got from Northwind Web Service. Next step is to create a service to get data from web searvice.
 
 ## Note
-Angular basic architecture like Component, Routing and Navigation is out of scope on this workshop. If you want to learn them please check [Angular Documentation Routing & Navigation](https://angular.io/guide/router).
+Learning Angular basic architecture like Component, Routing and Navigation is out of scope on this workshop. If you want to learn them please check [Angular Documentation Routing & Navigation](https://angular.io/guide/router).
 
 
 ## Next

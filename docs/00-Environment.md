@@ -1,4 +1,4 @@
-# 環境構築
+# Required Environment
 
 You need environments listed below on your PC to proceed with this workshop 
 

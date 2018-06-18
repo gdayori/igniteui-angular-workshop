@@ -23,26 +23,26 @@
 
 app\api-server-tables\api-server-tables.component.ts
 ```ts
-・・・
+...
   ngOnInit() {
-・・・
+...
   }
 
   itemClicked(tableName: string): void {
     console.log(tableName);
   }
-・・・
+...
 ```
 つづいて、対応するテンプレート側を編集します。コンポーネントクラスで定義した itemClicked() を以下のような Event Binding の記述でバインドします。
 
 app\api-server-tables\api-server-tables.component.html
 
 ```html
-・・・
+...
       <span (click)="itemClicked(item)" igxDrawerItem>
         {{item}}
       </span>
-・・・
+...
 ```
 
 実行して結果をみてみましょう。テーブル一覧のアイテムをクリックすると、コンソールにテーブル名が出力されることが確認できます。
@@ -56,13 +56,13 @@ app\api-server-tables\api-server-tables.component.html
 app/api-server-service.ts
 
 ```ts
-・・・
+...
   //テーブル名を引数にテーブルの全レコードを取得
   getTableData(tableName: string): Observable<string[]>  {
     return this.http.get<any>(`${this.baseUrl}/${tableName}/`, {headers: this.headers})
     .map(res => res.value);
   }
-・・・
+...
 ```
 
 引数にテーブル名を渡して、ベースURLにテーブル名を加えてリクエストを投げています。返却値は Observable ですが、本ハンズオンではどんなテーブルのスキーマ情報でも汎用的に取得できるよう string[] で型指定しています。（※実際に特定のテーブルのデータを取得する際には class APITable のようにモデル定義を行いましょう。）
@@ -75,7 +75,7 @@ ApiServerTablesComponentの関連ファイルをそれぞれ以下のように�
 
 app\api-server-tables\api-server-tables.component.ts
 ```ts
-・・・
+...
 export class ApiServerTablesComponent implements OnInit {
   constructor(private apiServerService: ApiServerService) { }
 
@@ -112,7 +112,7 @@ export class ApiServerTablesComponent implements OnInit {
       });
   }
 }
-・・・
+...
 ```
 
 app\api-server-tables\api-server-tables.component.html
@@ -178,7 +178,7 @@ app\api-server-tables\api-server-tables.component.scss
       <td>data1-2</td>
       <td>data1-3</td>
     </tr>
-    ・・・
+    ...
   </tbody>
 <table>
 ```
@@ -197,7 +197,7 @@ $ ng  serve
 
 これで、ユーザが選択したテーブルのデータを取得して ApiServerTablesComponent の中で表示されることが出来ました！
 
-ですが、見た目が良くないですし、使いづらいですね。また、画面全体の縦スクロールが豆粒のようになっており、全ての HTML DOM 要素が描画されているようです。大量に表示すると描画パフォーマンスやメモリに良くないですね・・・
+ですが、見た目が良くないですし、使いづらいですね。また、画面全体の縦スクロールが豆粒のようになっており、全ての HTML DOM 要素が描画されているようです。大量に表示すると描画パフォーマンスやメモリに良くないですね...
 
 続いては、Ignite UI for Angular のグリッド部品を利用して高機能なグリッド表示に切り替えてみましょう！
 

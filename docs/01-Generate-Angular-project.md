@@ -67,15 +67,9 @@ You would see the application like images below on your default browser.
 
 ※１ Ignite UI CLI：インフラジスティックスが提供する、Ignite UI のインストール/インポートやそれらを使ったViewの作成を簡単に実現するためのCLIツールです。内部的に Angular CLI が使われています。
 
-手順が完了し、アプリが動作すると以下の結果となります。
-
-![](assets/01-01.png)
-
-MonsterGridを選択して、どんな事ができるのか UI を触ってみましょう。
-
 ## Note: Going with Angular CLI ? 
 
-If you want to go with Angular CLI instead of Ignite UI CLI then check the following page and scroll down to the middle of the page. 
+The project you created has the same instructure as one created by Angular CLI, because Ignite UI CLI is using Angular CLI inside. If you want to go with Angular CLI instead of Ignite UI CLI then check the following page and scroll down to the middle of the page. 
 
 [Getting started with Ignite UI for Angular](https://www.infragistics.com/products/ignite-ui-angular/getting-started)
 

@@ -35,15 +35,15 @@ Open app.module.ts and add NorthwindService to the providers.
 app\app.module.ts
 
 ```ts
-・・・
+...
 import { NorthwindService } from './northwind.service';
-・・・
+...
 @NgModule({
-  ・・・
+  ...
   providers: [IgxExcelExporterService,
     NorthwindService],
 })
-・・・
+...
 ```
 
 To use the northwind service in the customers component, inject the dependency of the service into the component like the code below, which is called DI(Dipendency Injection), so that you can recieve the instance of the service and use it in the component. 
@@ -52,13 +52,13 @@ app\customers\customers.component.ts
 
 ```ts
 import { NorthwindService } from '../northwind.service';
-・・・
+...
 export class CustomersComponent implements OnInit {
   constructor(private northwindService: NorthwindService) { }
   ngOnInit() {
   }
 }
-・・・
+...
 ```
 
 ## Use the service
@@ -68,7 +68,7 @@ Let's add getCustomers() method inside the northwind service. In this section, j
 app/northwind-service.ts
 
 ```ts
-・・・
+...
 export class NorthwindService {
 
   constructor() { }
@@ -83,13 +83,13 @@ app\customers\customers.component.ts
 
 
 ```ts
-・・・
+...
   constructor(private northwindService: NorthwindService) { }
 
   ngOnInit() {
     this.northwindService.getCustomers();
   }
-・・・
+...
 ```
 
 This should result that getCustomers() is called when the customers component gets initialized and then the browser console shows the massage "getCustomers() was called !!"

@@ -22,4 +22,4 @@ In this workshop you connect to the [Northwind Web Services](http://northwind.se
 You need to be online but you don't have to prepare any DB on your local.
 
 ## Next
-[01-Angularプロジェクトの作成とIgniteUIのインポート](01-Angularプロジェクトの作成とIgniteUIのインポート.md) 
+[01 Generate Angular project with Ignite UI CLI](01-Generate-Angular-project.md)

@@ -75,4 +75,4 @@ The project you created has the same instructure as one created by Angular CLI, 
 
 ## Next
 
-[02-Componentの追加](02-Componentの追加.md)
+[02 Add Component](02-Add-Component.md)

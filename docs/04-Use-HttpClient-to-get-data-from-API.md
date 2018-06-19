@@ -108,4 +108,4 @@ Now you have json data from API in Component. Next you make a rich grid UI with 
 
 ## Next
 
-[05-APIからテーブルデータを取得](05-APIからテーブルデータを取得.md)
+[05 Use igx-grid](05-Use-igx-grid.md)

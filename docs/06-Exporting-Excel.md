@@ -111,4 +111,4 @@ Save the files you changed and check the result.
 
 ## Next
 
-[05-APIからテーブルデータを取得](05-APIからテーブルデータを取得.md)
+[07 Add Component for displaying chart](07-Add-Component-for-displaying-Chart.md)

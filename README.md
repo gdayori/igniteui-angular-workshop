@@ -2,30 +2,30 @@
 
 ## About this workshop
 
-This workshop is for those who want to try IgniteUI for Angular or who are looking for rich and fast UI components, e.g. grid and chart, which can be used in Angular app. You can experience how to build Angular app with Ignite UI for Angular and its productivity through this workshop.
+This workshop is for those who want to try IgniteUI for Angular or who are looking for rich and fast UI components which can be used in Angular app. You can experience how to build Angular app with Ignite UI for Angular and its productivity through this workshop.
 
-1. Generate Angular app with IgniteUI for Angular by using igniteui-cli
-2. Display Customers table got from Northwind Web Service on a grid 
-    1. Component
-    2. Service
-    3. Dipendency Injection
-    4. HTTP request
-    5. RxJs (Observable)
-3. Ignite UI for Angular について
-    1. 基本的な部品の利用方法
-    2. 利用UI部品
-        1. igx-grid
-        2. igx-navbar
+## New to Angular?
 
-## Build/Check Environment
+You are new to Angular? Don't worry about that, this workshop is easy to start. You can also learn a little bit about basic of Angular through the workshop. If you are expert of Angular, just use copy & paste for the basic of Angular and focus on how to use Ignite UI components.
 
-[Environment - getting started with igniteui-cli](docs/00-環境構築.md)
+## Check Environment
+To proceed this hands-on workshop you need the environments listed in the following page.
 
-## 目次
-0. [環境構築](docs/00-環境構築.md)
-1. [Angularプロジェクトの作成とIgniteUIのインポート](docs/01-Angularプロジェクトの作成とIgniteUIのインポート.md)
-2. [Componentの追加](docs/02-Componentの追加.md)
-3. [Serviceの追加と利用](docs/03-Serviceの追加と利用.md)
-4. [APIからテーブル一覧を取得](docs/04-APIからテーブル一覧を取得.md)
-5. [API からテーブルデータを取得](docs/05-APIからテーブルデータを取得.md)
-6. [igx-gridを利用して高機能グリッドを表示](docs/06-igx-gridを利用して高機能グリッドを表示.md)
+[Environment](docs/00-Environment.md)
+
+## Steps
+
+0. [Environment](docs/00-Environment.md)
+1. [Generate Angular project with Ignite UI CLI](docs/01-Generate-Angular-project.md)
+2. [Add Component](docs/02-Add-Component.md)
+3. [Add Service and call it from Component](docs/03-Add-Service-and-call-it-from-Component.md)
+4. [Use HttpClient to get data from API](docs/04-Use-HttpClient-to-get-data-from-API.md)
+5. [Use igx-grid](docs/05-Use-igx-grid.md)
+6. [Export Excel](docs/06-Exporting-Excel.md)
+7. [Add Component for displaying chart](docs/07-Add-Component-for-displaying-Chart.md)
+8. [Use lodash to generate the top 10 countries](docs/08-Use-lodash-to-generate-top-10-countries.md)
+9. [Use igx-category-chart](docs/09-Use-igx-category-chart.md)
+
+## Next
+
+[Environment](docs/00-Environment.md)

@@ -63,10 +63,12 @@ $ ng  serve
 Now you have a component to display customers data got from Northwind Web Service. Next step is to create a service to get data from web searvice.
 
 ## Note
-Learning Angular basic architecture like Component, Routing and Navigation is out of scope on this workshop. If you want to learn them please check [Angular Documentation Routing & Navigation](https://angular.io/guide/router).
+If you want to know more about Routing and Navigating in Angular app, check the following Angular doc.
+
+[Angular Documentation Routing & Navigation](https://angular.io/guide/router).
 
 
 ## Next
-[03-Serviceの追加と利用](03-Serviceの追加と利用.md)
+[03 Add Service and call it from Component](03-Add-Service-and-call-it-from-Component.md)
 
 

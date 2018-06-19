@@ -1,33 +1,22 @@
-# Add Component
+# Add component for displaying chart
 
-In this section you create a new component to display customer records got from Northwind web service with Angular CLI commands.
-
-## 目的
-- Component の追加方法を学習します。
-- Angular CLIをベースとしたアプリケーションの実行方法・確認方法を学習します。
-
-## Steaps
-1. Generate customers component
-2. Set the routing to the component
-3. Check the result
+In this section you create a new component to display the top 10 countries by the number of customers on a chart.
 
 ## Generate customers component
 
-Generate a new component named "customers" with "ng generate" commnad.
+Generate a new component named Top10Countries with "ng generate" commnad.
 
 Console
 
 ```sh
-$ ng generate component customers
+$ ng generate component Top10Countries
 ```
 
-Then the cli generate a folder and files regarding the "customers" component under the "app" folder.
+Then the cli generate a "top-10-countries" folder and files regarding the component under the "app" folder.
 
-## Set the routing to the customers component
+## Set the routing to the Top10Countries component
 
-You have already routing mechanism in the application which igniteui-cli created when you executed the ig command. It shows the registered routes as menu items on the left side menu bar and also it can navigate to a component when user click a menu item.
-
-Open app/app-routing.module.ts and import customers component and add it to the routes. 
+Open app/app-routing.module.ts and import Top10Countries component and add it to the routes. 
 
 app/app-routing.module.ts
 
@@ -37,36 +26,35 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { MonsterGridComponent } from './monstergrid/monstergrid.component';
 import { CustomersComponent } from './customers/customers.component';
+import { Top10CountriesComponent } from './top10-countries/top10-countries.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { text: 'Home' } },
   { path: 'monstergrid', component: MonsterGridComponent, data: { text: 'MonsterGrid' } },
-  { path: 'customers', component: CustomersComponent, data: { text: 'Customers' } }
+  { path: 'customers', component: CustomersComponent, data: { text: 'Customers' } },
+  { path: 'top-10-countries', component: Top10CountriesComponent, data: { text: 'Top 10 countries' } }
 ];
-
 ...
 ```
+
 ## Check the result
 
-After saving the files you modified, check the result with the following ng command. It builds your Angular app and put it on a test web server to see the result on your browser.
+After saving the files you modified, check the result with the following ng command.
 
 console
 
 ```sh
 $ ng  serve
 ```
-"customers" is added on the left side menu and if you click it then it navigate to the customers component.
 
-![](assets/02-01.png)
+![](assets/07-01.png)
 
-Now you have a component to display customers data got from Northwind Web Service. Next step is to create a service to get data from web searvice.
-
-## Note
-Learning Angular basic architecture like Component, Routing and Navigation is out of scope on this workshop. If you want to learn them please check [Angular Documentation Routing & Navigation](https://angular.io/guide/router).
+Now you have a component to display top 10 countries on a chart. Next step is to prepare top 10 countries data.
 
 
 ## Next
-[03-Serviceの追加と利用](03-Serviceの追加と利用.md)
+
+[08 Use lodash to generate the top 10 countries](08-Use-lodash-to-generate-top-10-countries.md)
 
 

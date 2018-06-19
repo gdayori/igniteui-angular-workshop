@@ -114,4 +114,4 @@ Now the northwind service gets called from the customers component. Next step is
 If you want to learn about Angular DI please check [Angular Document Dependency Injection](https://angular.io/guide/dependency-injection-pattern) 
 
 ## Next
-[04-APIからテーブル一覧を取得](04-APIからテーブル一覧を取得.md)
+[04 Use HttpClient to get data from API](04-Use-HttpClient-to-get-data-from-API.md)

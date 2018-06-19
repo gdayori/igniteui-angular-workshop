@@ -8,6 +8,14 @@ This workshop is for those who want to try IgniteUI for Angular or who are looki
 
 You are new to Angular? Don't worry about that, this workshop is easy to start. You can also learn a little bit about basic of Angular through the workshop. If you are expert of Angular, just use copy & paste for the Angular basic stuff and focus on how to use Ignite UI components.
 
+## What you build through the workshop
+
+Through this workshop you generate a new Angular project from scratch, you get data from a Wev Service and then show them with some Ignite UI for Angular components.
+
+![](docs/assets/06-01.png)
+
+![](docs/assets/09-01.png)
+
 ## Check Environment
 To proceed this hands-on workshop you need the environments listed in the following page.
 

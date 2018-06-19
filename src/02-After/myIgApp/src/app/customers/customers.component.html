@@ -1,0 +1,11 @@
+<button igxButton="flat" igxButtonColor="white" igxButtonBackground="green" igxRipple="#09f" (click)="exportExcel()">
+  <igx-icon>file_download</igx-icon>
+  <span>TO EXCEL</span>
+</button>
+<igx-grid #grid id="grid1" [data]="customersTable" [autoGenerate]="false"
+ width="800px" height="505px" [paging]="true" [perPage]="8">
+  <igx-column field="Id" header="ID" [sortable]="true" [filterable]="true" width="100px"></igx-column>
+  <igx-column field="CompanyName" header="Company Name" [sortable]="true" [filterable]="true" width="300px"></igx-column>
+  <igx-column field="ContactName" header="Contact Name" [sortable]="true" [filterable]="true" width="200px"></igx-column>
+  <igx-column field="Country" header="Country" [sortable]="true" [filterable]="true" width="200px"></igx-column>
+</igx-grid>

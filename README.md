@@ -6,7 +6,7 @@ This workshop is for those who want to try IgniteUI for Angular or who are looki
 
 ## New to Angular?
 
-You are new to Angular? Don't worry about that, this workshop is easy to start. You can also learn a little bit about basic of Angular through the workshop. If you are expert of Angular, just use copy & paste for the basic of Angular and focus on how to use Ignite UI components.
+You are new to Angular? Don't worry about that, this workshop is easy to start. You can also learn a little bit about basic of Angular through the workshop. If you are expert of Angular, just use copy & paste for the Angular basic stuff and focus on how to use Ignite UI components.
 
 ## Check Environment
 To proceed this hands-on workshop you need the environments listed in the following page.

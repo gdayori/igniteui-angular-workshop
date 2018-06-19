@@ -4,8 +4,8 @@ You need environments listed below on your PC to proceed with this workshop
 
 * Node.js (Version 8 or lator) <br>
 https://nodejs.org/ja/
-* Node.js includes npm
-* Code Editor (I recommend using Visual Studio Code)<br>https://code.visualstudio.com/download
+<br>* npm is included inNode.js
+* Code Editor (Visual Studio Code is recommended)<br>https://code.visualstudio.com/download
 
 Please install them if you haven't.
 

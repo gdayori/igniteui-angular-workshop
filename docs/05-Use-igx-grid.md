@@ -1,7 +1,7 @@
 # Use igx-grid
 In this section, you use igx-grid to display customers data got from API with some features like forting and filtering.
 
-## Ignite UI for Angular 利用準備の確認
+## Import Ignite UI for Angular components
 
 To use Ignite UI components in your project you need to import each modules corresponding to components you use, but you already have them because they are imported automatically when you generate this project with Ignite UI CLI.
 

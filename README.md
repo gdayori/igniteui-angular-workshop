@@ -16,6 +16,14 @@ Through this workshop you generate a new Angular project from scratch, you get d
 
 ![](docs/assets/09-01.png)
 
+
+## Application for the workshop
+
+Download the copy of this repository and find Angular projects in igniteui-angular-workshop/src.
+
+ - 01-Before/MyIgApp<br>Use this project if you got any trouble in using Ignite UI CLI. This project is the expected result when you completed [01 Generate Angular project with Ignite UI CLI](docs/01-Generate-Angular-project.md). 
+  - 02-After/MyIgApp<br>Use this project to see the final result of the workshop. This project is the expected result when you completed [09 Use igx-category-chart](docs/09-Use-igx-category-chart.md).
+
 ## Check Environment
 To proceed this hands-on workshop you need the environments listed in the following page.
 

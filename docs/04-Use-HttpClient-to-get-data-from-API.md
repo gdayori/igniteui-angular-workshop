@@ -8,13 +8,6 @@ Customers records:
 customers.json:
 [http://northwind.servicestack.net/customers.json](http://northwind.servicestack.net/customers.json)
 
-## Steps
-1. HttpClientModule のインポート
-2. HttpClientModule を利用してテーブル一覧を取得
-3. テーブル一覧の表示
-4. 実行結果の確認
-
-
 ## Import HttpClientModule
 
 Import HttpClientModule in the app.module.ts so that you can use HttpClient in your Components.
@@ -45,6 +38,8 @@ Open northwind-service.ts and do
 
 app/northwind-service.ts
 
+
+( If you are using Angular6 )
 ```ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; //Add
@@ -62,9 +57,37 @@ export class NorthwindService {
     .map(res => {
       return res.Customers as any;
     });
-     
    }
 }
+```
+
+( If you are using Angular5 or lower)
+
+```ts
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'; //Add
+import { Observable } from 'rxjs'; //Add
+import { map } from 'rxjs/operators'; //Add
+
+@Injectable({
+  providedIn: 'root'
+})
+export class NorthwindService {
+  private baseUrl = 'http://northwind.servicestack.net/customers.json'; // API End Point
+
+  constructor(private http: HttpClient) {
+   }
+
+  getCustomers(): Observable<any> {
+    return this.http.get<any>(this.baseUrl)
+      .pipe(
+        map(res => {
+          return res.Customers as any;
+        })
+      );
+   }
+}
+
 ```
 
 HttpClient.get() method returns Observable<T>. In the real world app it should be better to define data models to recieve data, but you don't have to do it and use "any" in this workshop just for making it simple.
@@ -101,10 +124,6 @@ After saving the files you modified, check the result with the following ng comm
 ![](assets/04-01.png)
 
 Now you have json data from API in Component. Next you make a rich grid UI with Ignite UI grid component bound to the data from API.
-
-## 参考
-
-[Angular 公式ドキュメント HttpClient](https://angular.io/guide/http) 
 
 ## Next
 

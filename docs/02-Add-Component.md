@@ -1,10 +1,6 @@
 # Add Component
 
-In this section you create a new component to display customer records got from Northwind web service with Angular CLI commands.
-
-## 目的
-- Component の追加方法を学習します。
-- Angular CLIをベースとしたアプリケーションの実行方法・確認方法を学習します。
+In this section, you create a new component to display customer records got from Northwind web service with Angular CLI commands.
 
 ## Steaps
 1. Generate customers component

@@ -2,12 +2,6 @@
 
 In this section you generate a new service to get data from the web searvice and then call it from the customers component.
 
-## Steps
-1. Service の生成
-2. Service の登録と DI
-3. Service の利用
-4. 実行結果の確認
-
 ## Generate northwind Service 
 
 Generate a new component named "northwind" with "ng generate" commnad.
@@ -21,12 +15,11 @@ Then Angular CLI generates northwind-service.ts under the app folder.
 
 ![](assets/03-01.png)
 
-    Note that the codes in the service.ts might be different depending on the Anguler version.
+Note that the codes in the service.ts might be different depending on the Anguler version.
 
 ## Registering the service and DI
 
-    Note:
-    If your project is based on Angular 6 or later (if you are used igniteui-cli v1.3.2 or later) you can skip this step because Angular CLI automatically set providedIn: 'root' in the @Injectable decorator which allows you to use the service without explicitly registering it in a component / module.
+Note that if your project is based on Angular 6 or later (if you are used igniteui-cli v1.3.2 or later) you can skip this step because Angular CLI automatically set providedIn: 'root' in the @Injectable decorator which allows you to use the service without explicitly registering it in a component / module.
 
 To use a service in a component (with Angular 5 or earlier) you need to register a service into a component or a module. 
 

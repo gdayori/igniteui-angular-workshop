@@ -62,8 +62,3 @@ If you have time to configure more, please reffer the API refenrece and do some 
 Save the files you changed and check the result.
 
 ![](assets/09-01.png)
-
-
-## Next
-
-[05-APIからテーブルデータを取得](05-APIからテーブルデータを取得.md)

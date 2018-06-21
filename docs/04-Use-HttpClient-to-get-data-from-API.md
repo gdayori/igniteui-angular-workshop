@@ -39,7 +39,7 @@ Open northwind-service.ts and do
 app/northwind-service.ts
 
 
-( If you are using Angular6 )
+( If you are using Angular5 or lower )
 ```ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; //Add
@@ -61,7 +61,7 @@ export class NorthwindService {
 }
 ```
 
-( If you are using Angular5 or lower)
+( If you are using Angular6)
 
 ```ts
 import { Injectable } from '@angular/core';
@@ -89,6 +89,7 @@ export class NorthwindService {
 }
 
 ```
+If you are using StackBlitz, Please refer [here](../src/03-StackBlitz/northwind.service.ts) and load all json data on your local.
 
 HttpClient.get() method returns Observable<T>. In the real world app it should be better to define data models to recieve data, but you don't have to do it and use "any" in this workshop just for making it simple.
 

@@ -89,7 +89,15 @@ export class NorthwindService {
 }
 
 ```
-If you are using StackBlitz, Please refer [here](../src/03-StackBlitz/northwind.service.ts) and load all json data on your local.
+If you are using StackBlitz, it you need to get data from your local because it can't go over http.
+
+```ts
+ ngOnInit() {
+ this._http.get('/assets/data.json').subscribe(data => {
+ console.log(data);
+ });
+ }
+```
 
 HttpClient.get() method returns Observable<T>. In the real world app it should be better to define data models to recieve data, but you don't have to do it and use "any" in this workshop just for making it simple.
 

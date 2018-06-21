@@ -15,7 +15,7 @@ npm install igniteui-angular-charts --save-dev
 
 To use igx-category-chart you need to import it in a module. Open app.module.ts and import it. 
 
-app/app-routing.module.ts
+app/app.module.ts
 
 ```ts
 ...
